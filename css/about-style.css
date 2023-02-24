@@ -1,0 +1,192 @@
+/*---------About us Page Css--------------*/
+#about-us-page #navbar-main {
+  padding: 14px 0px !important;
+  border-bottom: 1px solid #e2a236 !important;
+  background: #353535 !important;
+  -webkit-box-shadow: 0px 20px 20px -20px rgba(226, 162, 54, 0.2);
+  -moz-box-shadow: 0px 20px 20px -20px rgba(226, 162, 54, 0.2);
+  box-shadow: 0px 20px 20px -20px rgba(226, 162, 54, 0.2);
+}
+#about-us-page #about-part {
+  margin-top: 80px;
+}
+/*our vision*/
+#our-vision .item img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#our-vision .col-md-6{
+  overflow: hidden !important;
+}
+#our-vision .owl-prev {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 45%;
+  margin-left: 10px;
+  display: block !important;
+  border:1px solid #606060;
+  border-radius: 25px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+}
+
+#our-vision .owl-next {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  display: block !important;
+  border-radius: 25px;
+  background: #000;
+  color: #fff;
+  border:1px solid #606060;
+  font-size: 18px;
+}
+#our-vision .owl-prev:focus , #our-vision .owl-next:focus {
+  outline: none;
+}
+#our-vision {
+  background-color: #353535;
+  margin-bottom: 120px;
+}
+#our-vision h3 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.vision-text {margin: auto;}
+.vision-text p {padding-bottom: 10px;}
+.vision-text p:last-child {padding-bottom: 0px;}
+
+#our-vision .owl-item.active {
+  visibility: initial!important;
+}
+
+#our-vision .ceo-pic {
+  width: 100%;
+}
+#our-vision .owl-item {
+  visibility: hidden;
+}
+
+.owl-stage{
+  display: flex;
+}
+.owl-stage .item{
+  height: 100%;
+  display: flex;
+}
+#about {
+  padding: 60px 0 40px 0;
+}
+#our-vision h2{
+  color: #fff;
+}
+#our-vision p{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.team-cards {
+  border: 2px solid #e2a2366b;
+  box-shadow: 0 0 13px #00000040;
+  padding: 5px;
+  margin: 10px;
+  position: relative;
+}
+.team-img {
+  margin-bottom: 5px;
+}
+.team-cards  .team-body {
+  margin-bottom: 45px;
+}
+.team-body, .team-icons {
+  padding: 10px;
+}
+.team-cards h5 {
+  color: #000;
+  margin-bottom: 8px;
+}
+.team-cards p {
+  /*font-family: 'Century Gothic', sans-serif;*/
+  margin-bottom: 0px;
+  line-height: 1.1;
+  font-style: italic;
+}
+.team-icons i.fab.fa-linkedin-in, .team-icons i.fas.fa-envelope {
+  background: #e2a236;
+  color: #ffffff;
+  padding: 4px;
+  border-radius: 3px;
+}
+.team-body h6 {
+  margin-bottom: 5px;
+}
+.team-cards .team-icons {
+    position: absolute;
+    bottom: 0;
+}
+#about .owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+#about .owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #fff !important;
+  border: 1px solid #353535 !important;
+  margin: 0 3px;
+}
+#about .owl-dots button.owl-dot.active {
+  background-color: #353535!important;
+}
+#about button:focus{
+  outline: none;
+}
+
+@media (max-width: 1280px) { 
+	.team-cards .team-body {
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+	#our-vision p {
+		font-size: 16px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) { 
+	#our-vision p {
+		font-size: 16px;
+	}
+	.vision-text {
+		padding-top: 30px;
+	}
+}
+@media (min-width: 576px) and (max-width: 767px) { 
+	#our-vision p {
+		font-size: 16px;
+	}
+	.team-cards .team-body {
+		margin-bottom: 35px;
+	}
+	.vision-text {
+		padding-top: 30px;
+	}
+}
+@media (max-width: 575px) { 
+	#our-vision p {
+		font-size: 16px;
+	}
+	.team-cards .team-body {
+		margin-bottom: 35px;
+	}
+	.vision-text {
+		padding-top: 30px;
+	}
+}

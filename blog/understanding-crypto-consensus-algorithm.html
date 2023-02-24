@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<!-- Mirrored from propersix.com/blog/understanding-crypto-consensus-algorithm.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jan 2023 08:01:49 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>PROPERSIX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- ====== Fonts start ====== -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&amp;display=swap" rel="stylesheet">
+    <!-- ====== Fonts end ====== -->
+
+    <!-- ====== main style start ====== -->
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/venobox.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about-style.css">
+    <link href="../../cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- ====== main style end ====== -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPRLPVR39V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-YPRLPVR39V');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+</head>
+
+<body class="black-header">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- ====== Navbar Start ====== -->
+<section id="navbar-main" class="fixed-top banner-sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand logo-main-top" href="../index.html"><img src="../images/logo.png" alt="PROPERSIX logo" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-ico">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item pl-0">
+                        <a class="nav-link smooth-s nav-link-pt" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-s" href="../about-us/index.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-s" href="https://propersix.trade/">Exchange</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-s" href="https://propersix.casino/">Casino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-s" href="../index.html#news-part">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-s" href="../index.html#main-contactUs">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-s btn" href="../get-psix/index.html">Get PSIX</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
+<!-- ====== Navbar End ====== -->
+<section class="blog-content-page container">
+    <div class="image-cover-blog">
+        <img src="../images/consensus-algorithm-cover.jpg">
+    </div>
+    <div class="blog-body">
+        <h2>Understanding Crypto - Consensus Algorithm</h2>
+
+        <p>
+            When you have a centralized system like a social media platform or the database you use in your work, everything is very simple. When you make a change, the main server approves it and it gets saved. Or the head administrator makes a change and sends the new update to all systems in the network. It is a very straightforward process, but only works if there are no mistakes or ill intent. If there is a fault in the main server, it can save the wrong information without checking. And if the head administrator has a bad day, they can delete everyone’s information without leaving their office.
+            <br><br>
+            That is why decentralized systems have become so important in the world. It takes away the control from a single person or company and distributes it to everyone. It is only when everyone agrees that the change is valid that it is then entered in the ledger. Of course, that requires a new way of making sure that a consensus is reached. There are many ways to do that, with each of them having their pros and cons. In this article we will take a look at only the most popular ones, but be sure that many variations and hybrid versions exist.
+        </p>
+
+        <h3>Proof of Work (PoW)</h3>
+        <p>
+            <img class="left" src="../images/consensus-algorithm-1.jpg">
+            The original approach was offered in the blueprints of blockchains that later turned into Bitcoin. In this system a new block is mined only when a computer solves a complex mathematical formula. And when that is solved and the new block is mined, all the computers in the system check if it is correct. Imagine a complicated mathematical task of “find the x”. While it can be really hard to find the value of x, once that has been done anyone can insert the solution and see that it is correct in mere seconds.
+            <br><br>
+            You do not need to own any coins to start mining for them. All you need is a computer that can solve these formulas, that can “look for x”. If someone was to attack the network and try forcing their own solutions in it, that would take an enormous amount of energy and time, because the solutions still need to be found.
+            <br><br>
+            And that is the exact reason why PoW is going out of style. The approach of making it harder for transactions to be validated has become a problem. While the network is safe, it is also very slow, with every transaction waiting in a long queue. And multiple computers around the world are all solving these formulas and using up so much energy that it has raised some serious concerns about the effect it has on the world’s energy consumption and pollution. 
+        </p>
+
+        <h3>Proof of Stake (PoS)</h3>
+        <p>
+            <img class="left" src="../images/consensus-algorithm-2.jpg">
+            This is the next approach that has been tried when people noticed the drawbacks of PoW. Instead of everyone battling to see who is going to be the first one to check the transaction, a node is randomly chosen from all the nodes in the network who already own a coin. A random coin is chosen to validate the transaction and then it gets rewarded for that. So, if you have 10 coins, your chances of being chosen are multiplied by 10.
+            <br><br>
+            The problem with this is that it actually encourages stagnation. If you have bitcoin and a bitcoin mining rig, you can always sell all your bitcoin and be sure that new ones are going to be mined. But if you have coins in a PoS system, they are the ones that are making you all that money. The second you sell them, you lose your chance to earn. Even if you sell just half, your chances to earn are halved.
+            <br><br>
+            That is why there are many variations of PoS to try and solve this issue. There are systems where coin holders vote for the next validator. There are systems that prioritize users who have held the coins for a longer time. And there are countless hybrid systems that tend to take the best of two systems.
+            <br><br>
+            The problem with PoS is the fact that people will want to keep their coins, not trade them. In a short time it can become an “old members only” type of a club where the ones who have the most coins get richer, but the newcomers are barely allowed to participate. The logical conclusion of such a system is a full circle back to centralization where one person holds 51% of all coins, thus being able to validate fraudulent transactions if they want to. Sure, it might seem strange why one would attack a system where they have a majority coin ownership, but stranger things have happened in the crypto world.
+        </p>
+
+        <h3>Proof of Capacity (PoC)</h3>
+        <p>
+            <img class="left" src="../images/consensus-algorithm-3.jpg">
+            Now, instead of everyone calculating the possible answer like in PoW, the PoC offers every user a list of possible keys. The bigger your hard drive, the more keys you can receive and store, out of which there is a bigger chance that you have gotten the right one. All you have to do is allocate a place on your hard drive to be used for the key storage.
+            <br><br>
+            When you are mining in a PoW system, you need your computer to be a specific mining rig if you want any chances of success. You can’t do much else on it and, after a while, the expensive graphics card will be too overused to be good for anything else. With a PoC system it is more democratic. Anyone can allocate the part of their hard drive they are not using. When they change their mind and don’t want to participate any more, they can simply remove the keys and the hard drive has not deteriorated at all.
+            <br><br>
+            This seems like a good solution, but part of the reason might be the fact that it is not too widespread yet. Once it were to become mainstream, the same old race would start with huge mining farms, in which, instead of being rows and rows of graphics cards, there would be rows of hard drives.  And the same old thing as with PoW would just start all over again. 
+        </p>
+
+        <h3>Proof of Burn (PoB)</h3>
+        <p>
+            One of the basic tasks for a consensus algorithm is to make sure that the one who participates in the validation is, at the same time, interested in the wellbeing of the project. If you have a huge mining rig, you do not want to start any fraud so that you get banned and your rig is made obsolete. If you are a coin owner in a PoS system, you do not want to attack the whole blockchain, making the price tank and losing all your assets.
+            <br><br>
+            Just like that, if you are in a PoB system, you need to show your commitment by burning your own coins to get a chance to get coins. “Burning” is an act when you basically destroy your coins. As you can not just “delete” a virtual asset on a blockchain, it is done by sending a coin to a wallet that has no owner and no access key. The coins shall never be regained and can be considered lost. A real-life equivalent would be taking your wallet, putting it in a safe and throwing the safe in an ocean. 
+            <br><br>
+            By doing this the member shows his commitment to the network. Burning 0.01 of a coin to get the chance to gain a whole coin. The payouts are balanced so that people do not burn more than they gain. More coins sent to the “burning” address means a bigger chance to be awarded a new coin. 
+            <br><br>
+            While a relatively new system, it is not known how it would behave on a larger scale. Would this work with a million users? It will be hard to see this, as many people are reluctant about the system. The idea of destroying your assets seems very counter-intuitive, yes, but the bigger problem is trust. How sure can one be that the burned coins are actually sent to a dead address? And again, the rich will just get richer, just like with the PoS.
+        </p>
+
+        <h3>Hybrid models</h3>
+        <p>
+            As always, there is no one clear system that works for every occasion. One solution is faster while the other is safer. And sometimes low security is a drawback, but a private blockchain would not care too much for low security, as all nodes are verified. While some chains need to be really fast, that is not the case with Bitcoin, as it is not used for purchasing commodities, but as an investment tool and a very unpredictable asset storage. 
+            <br><br>
+            To each their own, sure, but that doesn’t mean that their systems can’t be upgraded. Some systems require the validators to be known, thus losing their anonymity. It greatly boosts security, but, at the same time, is a security flaw, as the whole system becomes centralized again. A validator’s node that is corrupted can cause great havoc. Other systems combine many previous systems like PoW and PoS in a single model, thus stabilizing the extreme security and loss of speed to a more average level where they meet in the middle.
+        </p>
+        
+        <h3>Conclusion</h3>
+        <p>
+            One could say there are many flawed algorithms just as well as it could be said that there are algorithms for every need and both of these arguments would be correct. There is no single car that is easily manufacturable, can be bought by everyone, win an F1 race and pull a truck at the same time. So it would be unfair to expect a single algorithm to be the fastest, safest and biggest at the same time. No single aspect can be the one that determines if it is good or not. 
+            <br><br>
+            Still, one thing is clear - the overall average data and possibilities will continue to increase. It is a new technology with everyone in the world now looking for a better solution. Some will continue to combine what we already know, while some are sure to blow everyone out of the water with a completely new and novel solution, that is for sure.
+        </p>
+
+        <p>Thank you for reading our blog. If you have any questions about the topic or want to suggest a new one, please write an email to <a href="../cdn-cgi/l/email-protection.html#f3919f9c94b383819c839681809a8bdd909c9e"><span class="__cf_email__" data-cfemail="2f4d4340486f5f5d405f4a5d5c4657014c4042">[email&#160;protected]</span></a>.</p>
+
+    </div>
+    <!-- <div class="next-prev-btns">
+        <div class="prev-btn">
+            <a href="#"><i class="fas fa-long-arrow-alt-left"></i>&nbsp;<span>P2PB2B and more!</span></a>
+        </div>
+        <div class="next-btn">
+            <a href="#"><span>Next one in line - BigOne!</span>&nbsp;<i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+    </div> -->
+</section>
+<!-- ====== Footer Start ====== -->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="footer-box">
+                    <a href="../index.html"><img src="../images/logo.png" alt="pic" class="img-fluid footer-logo"></a>
+                    <div class="f-mail">
+                        <a href="../cdn-cgi/l/email-protection.html#e38a8d858ca393918c938691908a9bcd808c8e"><i class="fas fa-envelope"></i> &nbsp;<span class="__cf_email__" data-cfemail="82ebece4edc2f2f0edf2e7f0f1ebfaace1edef">[email&#160;protected]</span></a>
+                        <a href="../cdn-cgi/l/email-protection.html#6b1b190e18182b1b19041b0e1918021345080406"><i class="fas fa-envelope"></i> &nbsp;<span class="__cf_email__" data-cfemail="7d0d0f180e0e3d0d0f120d180f0e1405531e1210">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="footer-box footer-box-mid">
+                    <ul class="link">
+                        <li>
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../about-us/index.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="https://propersix.trade/">Exchange</a>
+                        </li>
+                        <li>
+                            <a href="https://propersix.casino/">Casino</a>
+                        </li>
+                        <li>
+                            <a href="../privacy-policy/index.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="../cookies/index.html">Cookies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="footer-box footer-box-bottom">
+                    <p>Propersix LTD</p>
+                    <p>C-92040, Vat: MT26403306</p>
+                    <p>Standard House. Level 3. Birkirkara Hill. St. Julians STJ 1149 Malta </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-down">
+            <div class="row flex-column-reverse flex-lg-row">
+                <div class="col-lg-6">
+                    <div class="footer-down-text">
+                        <p>Copyright &copy; 2010-2020 ProperSIx All rights reserved</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-down-text">
+                        <ul class="social-link">
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/propersix" class="ml-0"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/propersix"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com/propersix/"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/company/propersix"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- ====== Footer End ====== -->
+
+<a class="top-up smooth-s" href="#hero-main">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<!-- ====== JS link Start ====== -->
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/wow.min.js"></script>
+<script src="../js/tilt.jquery.min.js"></script>
+<script src="../js/slick.min.js"></script>
+<script src="../js/iniSlick.js"></script>
+<script src="../js/sweetalert.min.js"></script>
+<script src="../js/venobox.min.js"></script>
+<script src="../js/custom.js"></script>
+<script src='../../www.google.com/recaptcha/api.js'></script>
+
+<script>
+    function captcha_control_2(){
+        $('#contactform').submit();
+    }
+    $("#main_submit").click(function() {
+        $('#contactform').on('submit', function(e) {
+            e.preventDefault();
+            if($("#contactform .form-group .g-recaptcha").css("display") == "none"){
+                $("#contactform .form-group .g-recaptcha").css("display","flex");
+            }
+            else if($("#contactform .g-recaptcha-response").val() != ""){
+                var fname = $("#fname").val();
+                var lname = $("#lname").val();
+                var email = $("#email").val();
+                var massg = $("#massg").val();
+
+                if (fname == '' || lname == '' || email == '' || massg == '') {
+                    swal({
+                        title: "Fields are empty!!!",
+                        text: "Please check the missing fields",
+                        icon: "warning",
+                        button: "Try Again",
+                    });
+                } else {
+                    $.ajax({
+                        type: 'post',
+                        url: 'mailer.php',
+                        data: {
+                            "first_name": fname,
+                            "last_name": lname,
+                            "email": email,
+                            "message": massg,
+                            "g-recaptcha-response": $("#contactform .g-recaptcha-response").val()
+                        },
+                        success: function JSalert(res) {
+                            if(res.includes("mail is sent")){
+                                swal({
+                                    title: "Success",
+                                    text: "Thank you! Your message has been sent!",
+                                    icon: "success",
+                                    button: "Okay",
+                                });
+                            }
+                            else{
+                                swal({
+                                    title: "Error",
+                                    text: "Captcha Validation Error.",
+                                    icon: "error",
+                                    button: "Okay",
+                                });
+                            }
+                        }
+                    });
+                }
+            }
+        });
+    });
+</script>
+<script>
+    /*$("#submit").click(function() {
+        $('#sub-form').on('submit', function(e){
+            e.preventDefault();
+            var email = $("#sub-email").val();
+            if (email == ''){
+                swal({
+                    title: "Field is empty!!!",
+                    text: "Please enter your email here!",
+                    icon: "warning",
+                    button: "Try Again"
+                });
+            } else {
+                swal({
+                    title: "Succcess",
+                    text: "Thankyou for subscribing to the ProperSix newsletter!",
+                    icon: "success",
+                    button: "Okay"
+                });
+            }
+        });
+    });*/
+</script>
+<script>
+    $('.js-tilt').tilt({
+        scale: 1
+    })
+</script>
+<script type="text/javascript">
+    function captcha_control_1(){
+        $("#contact-part .subscribe .footer-btn").click();
+    }
+    window.onload = function(){
+        $("#contact-part .subscribe .footer-btn").click(function(){
+            if($("#contact-part .subscribe .g-recaptcha").css("display") == "none"){
+                $("#contact-part .subscribe .g-recaptcha").css("display","block");
+            }
+            else{
+                $.post({
+                    url: "subscribe.php",
+                    type: "post",
+                    data: {
+                        "email": $("#contact-part .subscribe .form-control").val(),
+                        "g-recaptcha-response": $("#contact-part .subscribe textarea#g-recaptcha-response").val()
+                    },
+                    success: function(res){
+                        $("body").append(res);
+                    }
+                });
+            }
+        });
+        $(document).on('keypress','#contact-part .subscribe input',function(e) {
+            if(e.which == 13) {
+                e.preventDefault();
+                $("#contact-part .subscribe .footer-btn").click();
+            }
+        });
+    }
+</script>
+<!-- ====== JS link End ====== -->
+</body>
+
+<!-- Mirrored from propersix.com/blog/understanding-crypto-consensus-algorithm.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Jan 2023 08:01:56 GMT -->
+</html>

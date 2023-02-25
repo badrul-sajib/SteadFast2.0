@@ -846,36 +846,25 @@ p {
 
 /* ==== News-part ==== */
 
-/* ==== Testimonial-part ==== */
-#testimonial-part {
-  background: #353535;
-  min-height: 380px;
+/* ==== pricing-part ==== */
+#pricing-part {
+  background: #1DC68C;
+  height: 250px;
   display: flex;
   justify-content: center;
-  align-items: center; }
-  #testimonial-part .testimonial-slider .testimonial-box {
-    color: #ffffff;
-    margin: 0px 32px 15px; }
-    #testimonial-part .testimonial-slider .testimonial-box .testimonial-header {
-      color: #ffffff; }
-    #testimonial-part .testimonial-slider .testimonial-box .testimonial-header p {
-      font-size: 20px;
-	  padding-top: 10px; }
-    #testimonial-part .testimonial-slider .testimonial-box p {
-      text-align: center;
-      font-size: 16px;
-      position: relative; }
-      #testimonial-part .testimonial-slider .testimonial-box p i {
-        position: absolute;
-        font-size: 22px; }
-      #testimonial-part .testimonial-slider .testimonial-box p .top {
-        top: -10px;
-        left: -28px; }
-      #testimonial-part .testimonial-slider .testimonial-box p .bottom {
-        bottom: -10px;
-        right: -28px; }
-
-/* ==== Testimonial-part ==== */
+  align-items: center; 
+  margin: 0px 80px;
+  border-radius: 20px;
+}
+#pricing-part label{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+#pricing-part .text-danger{
+  margin-top: 50px;
+}
+/* ==== pricing-part ==== */
 /* ==== Contact-part ==== */
 #contact-part .subscribe form{
   display: flex;
@@ -1345,7 +1334,7 @@ p {
   #hero-main {
     padding: 185px 0px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 330px; }
   
   #contact-part .contact-header .btn {
@@ -1399,7 +1388,7 @@ p {
   #hero-main {
     padding: 175px 0px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 298px; }
   
   #contact-part .contact-header .btn {
@@ -1451,7 +1440,7 @@ p {
     padding: 10px 5px;
     max-width: 185px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 299px; }
   
   .navbar-expand-lg .logo-main-top img {
@@ -1592,7 +1581,7 @@ p {
     padding: 10px 5px;
     max-width: 185px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 274px; }
   
   .navbar-expand-lg .logo-main-top img {
@@ -1670,7 +1659,7 @@ p {
   #news-part .news-slider-small .news-small-main {
     margin: 0px 8px 0px 8px; }
 	
-  #testimonial-part .testimonial-slider .testimonial-box .testimonial-header p {
+  #pricing-part .testimonial-slider .testimonial-box .testimonial-header p {
     font-size: 18px;
 	padding-top: 5px; }
 
@@ -1787,7 +1776,7 @@ p {
     padding: 10px 5px;
     max-width: 185px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 259px; }
   
   .all-header {
@@ -1930,7 +1919,7 @@ p {
   #news-part .news-slider-small .news-small-main .news-small-text {
     width: 100%; }
 	
-  #testimonial-part .testimonial-slider .testimonial-box .testimonial-header p {
+  #pricing-part .testimonial-slider .testimonial-box .testimonial-header p {
     font-size: 18px;
 	padding-top: 5px; }
 
@@ -2059,7 +2048,7 @@ p {
   .all-header p {
     font-size: 16px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 249px; }
   
   .btn {
@@ -2208,7 +2197,7 @@ p {
   #news-part .news-slider-small .news-small-main .news-small-text {
     width: 100%; }
 	
-  #testimonial-part .testimonial-slider .testimonial-box .testimonial-header p {
+  #pricing-part .testimonial-slider .testimonial-box .testimonial-header p {
     font-size: 18px;
 	padding-top: 5px; }
 
@@ -2342,10 +2331,10 @@ p {
     max-width: 210px;
     margin-top: 30px; }
 
-  #testimonial-part .testimonial-slider .testimonial-box p i {
+  #pricing-part .testimonial-slider .testimonial-box p i {
     font-size: 20px; }
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 273px; }
   
   #contact-part .contact-header .btn {
@@ -2368,7 +2357,7 @@ p {
 		height: 285px;
 	}
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 273px; }
 
 	#main-contactUs .contact-box {
@@ -2392,7 +2381,7 @@ p {
 		height: 265px;
 	}
 	
-  #testimonial-part {
+  #pricing-part {
     min-height: 273px; }
 
 	#privacy-banner .privacy-banner-text h2 {
@@ -2418,7 +2407,7 @@ p {
 		
 	}
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 282px; }
   
 	#main-contactUs .contact-box {
@@ -2430,7 +2419,7 @@ p {
 		height: 250px;
 	}
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 282px; }
 }
 @media (max-width: 360px) {
@@ -2445,7 +2434,7 @@ p {
 		font-size: 14px;
 	}
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 301px; }
   
 @media (max-width: 320px) {
@@ -2455,7 +2444,7 @@ p {
 }
 	
 
-  #testimonial-part {
+  #pricing-part {
     min-height: 301px; }
   
 /* ==== Responsive End ==== */

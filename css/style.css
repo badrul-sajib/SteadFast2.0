@@ -2106,6 +2106,10 @@ p {
   #about-part .about-box-text .about-header {
 		text-align: center;
 	}
+  .about-box-text hr{
+    margin-left: 80px;
+    color: #000000;
+  }
 
   #about-part .about-box-text p {
     font-size: 16px; }
@@ -2123,6 +2127,7 @@ p {
     width: 100%; }
 
   #hilight-part .hilight-main .hilight-pic img {
+    border: solid 2px #1DC68C;
     height: 360px; }
 
   #grow-part .grow-header .grow-tab-btns {

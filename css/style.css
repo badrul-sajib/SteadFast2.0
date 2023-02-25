@@ -2302,6 +2302,15 @@ p {
   .track-id #track-btn{
     margin-top: 45px;
   }
+  #pricing-part{
+    display: block;
+    justify-content: space-between;
+    height: fit-content;
+    width: 300px;
+    text-align: left;
+    align-items: center;
+    margin-left: 45px;
+  }
 }
 @media (max-width: 480px) {
   #news-part .news-slider-small {

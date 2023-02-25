@@ -2261,7 +2261,10 @@ p {
 		text-align: center;
 		margin-bottom: 20px;
 	}
-
+ #appicon{
+  display: inline-block;
+  text-align: center;
+ }
 	
 	#privacy-banner {
 		padding: 110px 0px;
@@ -2581,3 +2584,7 @@ p {
 #appicon img{
   width: 150px !important;
 }
+#appicon .img1{
+  margin-left: 60px !important;
+}
+
